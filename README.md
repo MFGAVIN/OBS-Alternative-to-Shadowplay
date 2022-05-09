@@ -2,45 +2,60 @@
 
 
 ## Table of Contents
-
+This has been formatted in my thinking of a tree, as in the pathing taken to get to it.
 - [Introduction](#introduction) 
 - [Disclaimer](#disclaimer) 
-Start Here VVV If You Don't Give A Shit
 - [Prerequisites](#prerequisites) 
-- [Profile & Scene Collection](#profileSceneCollection) 
-	- [Profile](#profile) 
-	- [Scene Collection](#sceneCollection) 
-- [Recording Settings](#recording) 
-- [Audio](#audio) 
-- [Video](#video) 
-- [Replay Buffer](#replayBuffer) 
-	- [Settings](#replayBufferSettings) 
-	- [Hotkeys](#replayBufferHotkeys) 
-- [OBSPlay](#OBSPlay) 
-	- [Known Bugs](#knownBugs) 
-	- [How to Setup OBSPlay](#setupOBS) 
-- [Advanced Settings](#advanced) 
-	- [General](#advancedGeneral)
-	- [Video](#advancedVideo)
-	- [Recording](#advancedRecording)
-- [Scene Creation and Automatic Scene Switcher](#scass)  
-	- [Scene Creation](#sc)
-	- [Automatic Scene Switcher](#ass)
+- [Starting Screen of OBS->](#mainWindow)
+	- [Profile & Scene Collection](#profileSceneCollection) 
+	-  [Scene Creation & Automatic Scene Switcher->](#scass)  
+		- [Scene Creation](#sc)
+		- [Automatic Scene Switcher](#ass)
+	- [OBSPlay->](#OBSPlay) 
+		- [Known Bugs](#knownBugs) 
+		- [How to Setup OBSPlay](#setupOBS) 
+	- [Advanced Audio Properties](#aap)
+- [Settings->](#settings)
+	- [General](#general)
+	- [Output->](#output)
+		- [Recording](#output-Recording)
+		- [Audio](#output-Audio)
+		- [Replay Buffer](#output-ReplayBuffer)
+	- [Audio->](#audio)
+		- [General](#audio-General)
+		- [Global Audio Devices](#audio-GlobalAudioDevices)
+	- [Video](#video)
+	- [Hotkeys](#hotkeys)
+	- [Advanced->](#advanced)
+		- [General](#advanced-General)
+		- [Video](#advanced-Video)
+		- [Recording](#advanced-Recording)
 - [Debugging](#debugging)
 - [Making OBS Open on Startup](#obsStartup)
-- [Sources Cited](#citations) 
+- [The Guide Itself](#guide)
+- [Credits & Cited Sources](#citations) 
 
-## Introduction (You Can Skip This)<a name="introduction"><a/>
+## Introduction (Optional)<a name="introduction"><a/>
 Hello, my name is MFGAVIN and what sparked this journey was the hatred for NVIDIA Shadowplay, its unreliable video quality, dogshit audio quality annoyed me, so I journey across the lands of OBS Forums to find the knowledge and ingredients to make an alternative.  And I'm happy to say that I think I pieced enough pieces together to it better than Shadowplay and thought others might enjoy it as well.
 
+ 
+
+
 ## Disclaimer <a name="disclaimer"><a/>
-Before we dive into this I want to let you guys know that the information I have isn't my own and so whenever we get to certain parts I'll provide links to the places where I got that information.  Also the way I made this was by searching up OBS articles, asking for help in discords, or looking up others setups.
+First, I'd like to state that this guide is WIP unless I state otherwise.  I'd like to hear all criticism as this is my first time making something like this.  Also, please you the Issues tab for anything you need me for and I'll just 
 
-The information presented in this guide is heavily based off [StuckInLimbo's OBS-ReplayBuffer-Setup](https://github.com/StuckInLimbo/OBS-ReplayBuffer-Setup) and in the event they either want this deleted I will comply or edited the information presented in a way it works for both of us.
+I'd like to state that most of the information used here was gathered from others and without their pioneering I probably would've had to learn how to code scripts for OBS so thanks to them.
 
-Also, the settings I give through this guide may have to be altered later on through the [Debugging](#debugging) process.
+**Also I'd like to state these sections:**
+- [Output->](#output)
+	- [Recording](#output-Recording)
+	- [Audio](#output-Audio)
+	- [Replay Buffer](#output-ReplayBuffer)
+	
+**uses information entirely found in** [StuckInLimbo's OBS-ReplayBuffer-Setup](https://github.com/StuckInLimbo/OBS-ReplayBuffer-Setup) so I do not take any credit for the information presented in those sections.
 
-Lastly, I just want to say that this is my first ever making a article willingly so it might be a shit and a mess but I'll edit it later on to gather my thoughts.
+If others want to use this guide in something, ex: Youtube, then I ask to provide credits to Me as well as all the sources I used.
+
 
 ## Prerequisites<a name="prerequisites"><a/>
 I don't want to hand hold so take care of this stuff before starting. 
@@ -48,7 +63,8 @@ I don't want to hand hold so take care of this stuff before starting.
  - An install of **OBS Studio** (se.live is cringe)
  - Download this [script](https://obsproject.com/forum/resources/obsplay-nvidia-shadowplay-alternative.1326/) from OBS Forums called **OBSPlay**.
 
-## Profile & Scene Collection <a name="profileSceneCollection"><a/>
+## Starting Screen of OBS <a name = "mainWindow"><a/>
+### Profile & Scene Collection <a name="profileSceneCollection"><a/>
  
 This part only really matters if you have a bunch of scenes and stuff already setup and don't want to screw it up.
 
@@ -64,10 +80,67 @@ I'll give you guys my profile and scene collection which can skip most likely th
 #### Scene Collection <a name="sceneCollection"><a/>
 [Insert ClipRecorder Scene Collection]
 
- ## Recording Settings <a name="recording"><a/>
+### Scene Creation and Automatic Scene Switcher <a name="scass"><a/>
+This portion is one of the vital parts of this guide.
 
-### Disclaimer
-**This section uses information from** [StuckInLimbo's OBS-ReplayBuffer-Setup](https://github.com/StuckInLimbo/OBS-ReplayBuffer-Setup) 
+#### Scene Creation <a name="sc"><a/>
+You must follow this as it's important with OBSPlay because of how the prefixes will work with files and folders.
+
+1. Make One Scene Called "Desktop" and add a Display Capture source
+2. Add the games you play using Game Captures as it's better for performance
+
+**For LoL:**
+	If you're trying to add **League of Legends** and it's not working it could be because of your overlays as it's really stingy, so make sure you check it out, for me it didn't work because of **RTSS Overlay**.  If that do
+	
+#### Automatic Scene Switcher <a name="ass"><a/>
+This part's important as it'll optimize the resources when switching to the appropriate from desktop capture and game capture.  
+
+Before I go into more detail, something to note here with this, the replay buffer, and OBSPlay is that whenever you clip something whatever the most recent scene was switched to will result in the file be prefixed to that scene so just remember that when searching for it as it may sometimes be placed somewhere you don't want.
+
+**Go to Tools>Automatic Scene Switcher**
+[Image Needed of Automatic Scene Switcher with boxes highlighted]
+
+So looking at the Long Box this is where you need to load up the game and select it then the Short Box needs to be the Scene Name, 
+
+Then look at the **"When no window matches:"** and **select "Switch to:"** and lastly **select "Desktop"**
+
+Leave everything else else as is.
+And all that's left is to do that for all the other games you play.
+
+
+
+### OBSPlay <a name="OBSPlay"><a/>
+What the script does is it makes it able to make folders and or files based on the scene names.  Sadly, the person who made the script was last active July 16, 2021.  And so they're two bugs that I found that I want you guys to be aware of.
+
+#### Known Bugs <a name="knownBugs"><a/>
+ 1. The first bug happens if you want to use **MKV** and want to **automatically remux it to MP4**, it'll cause the **MP4 file to mysteriously disappear into the backrooms** for the entities to enjoy.
+ 2. The second bug is occurs when selecting the settings for the script so I'll go over it more during the setup.
+ 
+#### How to Setup OBSPlay <a name="setupOBS"><a/>
+ 1. Open **OBS**
+ 2. Click on **Tools**
+ 3. Click on **Scripts**
+ 4. Click on the **+ Button**
+ 5. Add the **OBSPlay script** from where ever you're keeping it
+ 6. So for the **Base Save Path** you're going to make a folder inside of whatever the hard drive you chose in **C:/** then make a folder inside of it I made my clips so it would be **C:/Clips/**
+ 
+
+Now if you follow the steps correctly you should be on this portion 
+[Image Needed Here]
+
+**They're 2 Different Modes**
+1. Clips will be prefixed with scene name and then go into a singular folder
+	1. If this sounds good to you then **check only "Scene Based File Prefix".**
+2. Same as Option 1,  but folders will be made according to scene names and the clips will be placed in their according scene folder.
+	2. If this sounds good to you then **check both boxes**
+
+
+
+## Settings-> <a name = "settings"><a/>
+
+
+
+ ## Recording Settings <a name="recording"><a/>
 
  Go to **Settings** then skip both **General** and **Stream** since there is nothing there that can help us.  So go to **Output** then **Recording**, these settings are what I use but I'll discuss why.
  [Insert Image Here of Recording Tab from Output]
@@ -137,7 +210,6 @@ Now you shouldn't have to mess with this settings to much a be able to **ignore 
 
 ## Replay Buffer <a name="replayBuffer"><a/>
 ### Disclaimer
-**This section uses information from** [StuckInLimbo's OBS-ReplayBuffer-Setup](https://github.com/StuckInLimbo/OBS-ReplayBuffer-Setup) 
 
 ### Settings <a name="replayBufferSettings"><a/>
 Go to the **Replay Buffer** inside the **Output** tab and you should see this
@@ -152,33 +224,6 @@ Go to the **Hotkeys tab** and scroll until you find **"Start Replay Buffer"** an
 
 After those scroll down more until you see **Replay Buffer** with only one hotkey available, **"Save Replay"**, set it to whatever you want maybe **\\** or something with **ALT + __**
 
-
-## OBSPlay <a name="OBSPlay"><a/>
-What the script does is it makes it able to make folders and or files based on the scene names.  Sadly, the person who made the script was last active July 16, 2021.  And so they're two bugs that I found that I want you guys to be aware of.
-
-### Known Bugs <a name="knownBugs"><a/>
- 1. The first bug happens if you want to use **MKV** and want to **automatically remux it to MP4**, it'll cause the **MP4 file to mysteriously disappear into the backrooms** for the entities to enjoy.
- 2. The second bug is occurs when selecting the settings for the script so I'll go over it more during the setup.
- 
-### How to Setup OBSPlay <a name="setupOBS"><a/>
- 1. Open **OBS**
- 2. Click on **Tools**
- 3. Click on **Scripts**
- 4. Click on the **+ Button**
- 5. Add the **OBSPlay script** from where ever you're keeping it
- 6. So for the **Base Save Path** you're going to make a folder inside of whatever the hard drive you chose in **C:/** then make a folder inside of it I made my clips so it would be **C:/Clips/**
- 
-
-Now if you follow the steps correctly you should be on this portion 
-[Image Needed Here]
-
-**They're 2 Different Modes**
-1. Clips will be prefixed with scene name and then go into a singular folder
-	1. If this sounds good to you then **check only "Scene Based File Prefix".**
-2. Same as Option 1,  but folders will be made according to scene names and the clips will be placed in their according scene folder.
-	2. If this sounds good to you then **check both boxes**
-
-	
 ## Advanced Settings <a name="advanced"><a/>
 We are going to focusing on **General, Video, and Recording,** everything else doesn't matter.
 
@@ -196,33 +241,6 @@ Lastly, set **Color Range** to **Partial**
 You can leave all of this as is, but with **Filename Formatting** if you click on it and hover over the text you can see all the possible settings you can set that to.
 Lastly, **leave all the other stuff unchecked and blank**
 
-## Scene Creation and Automatic Scene Switcher <a name="scass"><a/>
-This portion is one of the vital parts of this guide.
-
-### Scene Creation <a name="sc"><a/>
-You must follow this as it's important with OBSPlay because of how the prefixes will work with files and folders.
-
-1. Make One Scene Called "Desktop" and add a Display Capture source
-2. Add the games you play using Game Captures as it's better for performance
-
-For LoL:
-	If you're trying to add **League of Legends** and it's not working is because of your overlays as it's really stingy so make sure you check it out, for me it didn't work because of **RTSS Overlay**.  Anything else and explore reasons why on your own.
-	
-### Automatic Scene Switcher <a name="ass"><a/>
-This part's important as it'll optimize the resources when switching to the appropriate from desktop capture and game capture.  
-
-Before I go into more detail, something to note here with this, the replay buffer, and OBSPlay is that whenever you clip something whatever the most recent scene was switched to will result in the file be prefixed to that scene so just remember that when searching for it as it may sometimes be placed somewhere you don't want.
-
-**Go to Tools>Automatic Scene Switcher**
-[Image Needed of Automatic Scene Switcher with boxes highlighted]
-
-So looking at the Long Box this is where you need to load up the game and select it then the Short Box needs to be the Scene Name, 
-
-Then look at the **"When no window matches:"** and **select "Switch to:"** and lastly **select "Desktop"**
-
-Leave everything else else as is.
-And all that's left is to do that for all the other games you play.
-
 
 
 ## Debugging <a name="debugging"><a/>
@@ -239,11 +257,12 @@ The way they recommend to debug is
 
 
 
-## How to make OBS Open on Startup <a name="obsStartup"><a/>
-This guide is a pure rip off of Koala's guide, thanks to them for allowing me to repost it into here.
+## How to Make OBS Run on Startup <a name="obsStartup"><a/>
+**Thanks to Koala for letting me use this guide they made for here.**
+
 You are able to run OBS as administrator on login without elevation prompt by using the task scheduling feature of Windows.  
 
-You should find the **Task Scheduler** by searching for "task scheduler" in Windows Search. It should find your localized name for task scheduler.  
+You should find the **Task Scheduler** by searching for "task scheduler" in **Windows Search**. It should find your localized name for task scheduler.  
 In **Task Scheduler**, right-click the library and select **Create Task**.  
   
 
@@ -296,8 +315,10 @@ C:\Windows\System32\schtasks.exe /run /tn "OBS Studio autostart"
   
 Notice that "OBS Studio autostart" is the name of the scheduled task you gave on the first property page of the task.
 
+## The Guide Itself <a name = "guide"><a/>
+This section is purely for the development of the guide itself.
 
-## Sources Used <a name="citations"><a/>
+## Sources Used <a name = "citations"><a/>
 I'd like to give thanks to the [OBS discord server](https://discord.gg/obsproject) and [Epos Vox's discord server](https://discord.gg/eposvox) for helping with questions I had.
 
 Then thanks to [StuckInLimbo's OBS-ReplayBuffer-Setup](https://github.com/StuckInLimbo/OBS-ReplayBuffer-Setup) as I heavily used the information provided to make this guide
