@@ -6,42 +6,42 @@ This has been formatted in my thinking of a tree, as in the pathing taken to get
 - [Introduction](#introduction) 
 - [Disclaimer](#disclaimer) 
 - [Prerequisites](#prerequisites) 
-- [Starting Screen of OBS->](#mainWindow)
-	- [Profile & Scene Collection](#profileSceneCollection) 
-	-  [Scene Creation & Automatic Scene Switcher->](#scass)  
-		- [Scene Creation](#sc)
-		- [Automatic Scene Switcher](#ass)
-	- [OBSPlay->](#OBSPlay) 
-		- [Known Bugs](#knownBugs) 
-		- [How to Setup OBSPlay](#setupOBS) 
-	- [Advanced Audio Properties](#aap)
-- [Settings->](#settings)
+- [Starting Screen of OBS](#mainWindow) COMPLETED
+	- [Profile & Scene Collection](#profileSceneCollection) COMPLETED
+	- [Scene Creation & Automatic Scene  Switcher](#scass)  COMPLETED
+		- [Scene Creation](#sc) COMPLETED
+		- [Automatic Scene Switcher](#ass) COMPLETED
+	- [OBSPlay](#OBSPlay) COMPLETED
+		- [Known Bugs](#knownBugs)  COMPLETED
+		- [How to Setup OBSPlay](#setupOBS)  COMPLETED
+	- [Advanced Audio Properties](#aap) COMPLETED
+- [Settings](#settings)
 	- [General](#general)
-	- [Output->](#output)
+	- [Output](#output)
 		- [Recording](#output-Recording)
 		- [Audio](#output-Audio)
 		- [Replay Buffer](#output-ReplayBuffer)
-	- [Audio->](#audio)
+	- [Audio](#audio)
 		- [General](#audio-General)
 		- [Global Audio Devices](#audio-GlobalAudioDevices)
 	- [Video](#video)
 	- [Hotkeys](#hotkeys)
-	- [Advanced->](#advanced)
+	- [Advanced](#advanced)
 		- [General](#advanced-General)
 		- [Video](#advanced-Video)
 		- [Recording](#advanced-Recording)
 - [Debugging](#debugging)
-- [Making OBS Open on Startup](#obsStartup)
+- [Making OBS Open on Startup](#obsAutoStart)
 - [The Guide Itself](#guide)
 - [Credits & Cited Sources](#citations) 
 
-## Introduction (Optional)<a name="introduction"><a/>
+# Introduction (Optional)<a name="introduction"><a/>
 Hello, my name is MFGAVIN and what sparked this journey was the hatred for NVIDIA Shadowplay, its unreliable video quality, dogshit audio quality annoyed me, so I journey across the lands of OBS Forums to find the knowledge and ingredients to make an alternative.  And I'm happy to say that I think I pieced enough pieces together to it better than Shadowplay and thought others might enjoy it as well.
 
  
 
 
-## Disclaimer <a name="disclaimer"><a/>
+# Disclaimer <a name="disclaimer"><a/>
 First, I'd like to state that this guide is WIP unless I state otherwise.  I'd like to hear all criticism as this is my first time making something like this.  Also, please you the Issues tab for anything you need me for and I'll just 
 
 I'd like to state that most of the information used here was gathered from others and without their pioneering I probably would've had to learn how to code scripts for OBS so thanks to them.
@@ -57,14 +57,14 @@ I'd like to state that most of the information used here was gathered from other
 If others want to use this guide in something, ex: Youtube, then I ask to provide credits to Me as well as all the sources I used.
 
 
-## Prerequisites<a name="prerequisites"><a/>
+# Prerequisites<a name="prerequisites"><a/>
 I don't want to hand hold so take care of this stuff before starting. 
 
  - An install of **OBS Studio** (se.live is cringe)
  - Download this [script](https://obsproject.com/forum/resources/obsplay-nvidia-shadowplay-alternative.1326/) from OBS Forums called **OBSPlay**.
 
-## Starting Screen of OBS <a name = "mainWindow"><a/>
-### Profile & Scene Collection <a name="profileSceneCollection"><a/>
+# Starting Screen of OBS <a name = "mainWindow"><a/>
+## Profile & Scene Collection <a name="profileSceneCollection"><a/>
  
 This part only really matters if you have a bunch of scenes and stuff already setup and don't want to screw it up.
 
@@ -75,15 +75,15 @@ So with this you can start fresh and be able to follow the tutorial, but again i
 
 I'll give you guys my profile and scene collection which can skip most likely the entirety of this guide but you will still potentially have to change them.
 
-#### Profile <a name="profile"><a/>
+Profile:
 [Insert ClipRecorder Profile]
-#### Scene Collection <a name="sceneCollection"><a/>
+Scene Collection:
 [Insert ClipRecorder Scene Collection]
 
-### Scene Creation and Automatic Scene Switcher <a name="scass"><a/>
+## Scene Creation and Automatic Scene Switcher <a name="scass"><a/>
 This portion is one of the vital parts of this guide.
 
-#### Scene Creation <a name="sc"><a/>
+### Scene Creation <a name="sc"><a/>
 You must follow this as it's important with OBSPlay because of how the prefixes will work with files and folders.
 
 1. Make One Scene Called "Desktop" and add a Display Capture source
@@ -92,7 +92,7 @@ You must follow this as it's important with OBSPlay because of how the prefixes 
 **For LoL:**
 	If you're trying to add **League of Legends** and it's not working it could be because of your overlays as it's really stingy, so make sure you check it out, for me it didn't work because of **RTSS Overlay**.  If that do
 	
-#### Automatic Scene Switcher <a name="ass"><a/>
+### Automatic Scene Switcher <a name="ass"><a/>
 This part's important as it'll optimize the resources when switching to the appropriate from desktop capture and game capture.  
 
 Before I go into more detail, something to note here with this, the replay buffer, and OBSPlay is that whenever you clip something whatever the most recent scene was switched to will result in the file be prefixed to that scene so just remember that when searching for it as it may sometimes be placed somewhere you don't want.
@@ -108,15 +108,14 @@ Leave everything else else as is.
 And all that's left is to do that for all the other games you play.
 
 
-
-### OBSPlay <a name="OBSPlay"><a/>
+## OBSPlay <a name="OBSPlay"><a/>
 What the script does is it makes it able to make folders and or files based on the scene names.  Sadly, the person who made the script was last active July 16, 2021.  And so they're two bugs that I found that I want you guys to be aware of.
 
-#### Known Bugs <a name="knownBugs"><a/>
+### Known Bugs <a name="knownBugs"><a/>
  1. The first bug happens if you want to use **MKV** and want to **automatically remux it to MP4**, it'll cause the **MP4 file to mysteriously disappear into the backrooms** for the entities to enjoy.
  2. The second bug is occurs when selecting the settings for the script so I'll go over it more during the setup.
  
-#### How to Setup OBSPlay <a name="setupOBS"><a/>
+### How to Setup OBSPlay <a name="setupOBS"><a/>
  1. Open **OBS**
  2. Click on **Tools**
  3. Click on **Scripts**
@@ -134,17 +133,23 @@ Now if you follow the steps correctly you should be on this portion
 2. Same as Option 1,  but folders will be made according to scene names and the clips will be placed in their according scene folder.
 	2. If this sounds good to you then **check both boxes**
 
+## Advanced Audio Properties <a name = "aap"><a/>
+Lastly, go back into the **Main Window of OBS** and look at the **Audio Mixer**, and select **Advanced Audio Settings**. After that look at the **tracks** at set it to this.
 
+[Insert Image of Advanced Audio Settings]
 
-## Settings-> <a name = "settings"><a/>
+# Settings<a name = "settings"><a/>
+![[Pasted image 20220509194316.png]]
 
+## General <a name = "general"><a/>
+The only section that you may want to know about is called, **"System Tray"**
 
-
- ## Recording Settings <a name="recording"><a/>
-
- Go to **Settings** then skip both **General** and **Stream** since there is nothing there that can help us.  So go to **Output** then **Recording**, these settings are what I use but I'll discuss why.
- [Insert Image Here of Recording Tab from Output]
+## Output <a name = "output"><a/>
+### Recording <a name = "output-Recording"><a/>
+[Insert Image Here of Recording Tab from Output]
  
+Leave **Type** to **Standard**
+
 **Set the recording path to the hard drive where you want your clips to be stored**, for me its F:/ but for others it may be C:/ , D:/.  The reason why is because of a bug with OBSPlay and the way it moves files around
 [Insert Image of Hard Drives]
 
@@ -175,92 +180,92 @@ Leave **Look-Ahead unchecked**
 Set **GPU to 0**
  
 Then lastly for this section, **Max B-Frames to 2**
- 
- 
- ## Audio <a name="audio"><a/>
-### Disclaimer
-**This section uses information from** [StuckInLimbo's OBS-ReplayBuffer-Setup](https://github.com/StuckInLimbo/OBS-ReplayBuffer-Setup) 
 
- So right next to the **Recording** tab, go to **Audio**
- - Set All the **Audio Track's bitrate to 160** and if you want to name them you can.
+### Audio <a name="output-Audio"><a/>
+Set All the **Audio Track's bitrate to 160** and you can name them if you want to.
 
-Go to the **Audio** tab right below **Output**, here is where the tracks come into hand. 
+### Replay Buffer <a name = "output-ReplayBuffer"><a/>
 
-[Image of Audio tab in Settings]
+**Maximum Replay Time** should be set from a range of **30s to 240s** 
 
-Now depending on what your audio devices are set to you should either put the **Sample Rate** to **44.1kHz or 48kHz** and if you don't know what they are then I'll show you a way later.
+**Maximum Memory** should range from **1GB (1024MB) to 4GB (4096MB)**  
 
-Go onto **Global Audio Devices** and select your **Desktop Audio** as well as the **Mic** you use.  See here is where the tracks come in, one track puts both audios into one and 2 splits them.  **After you fill in the ones you use, Disable all others.** Lastly, **ignore the other stuff** since I didn't touch it nor do I know what they do.
+## Audio <a name = "audio"><a/>
+For this section we only be looking at, **General **and** Global Audio Devices** everything else is for you to learn about.
 
-Lastly, go back into the **Main Window of OBS** and look at the **Audio Mixer**, and select **Advanced Audio Settings**. After that look at the **tracks** at set it to this.
-[Insert Image of Advanced Audio Settings]
+### General <a name = "audio-General"><a/>
+Depending on whatever you're audio devices are on in your PC you may either have go for **44.1kHz** or **48 kHz**
 
+Leave **Channels **to** Stereo**
 
-## Video Settings
-### Disclaimer
-**This section uses information from** [StuckInLimbo's OBS-ReplayBuffer-Setup](https://github.com/StuckInLimbo/OBS-ReplayBuffer-Setup) 
+### Global Audio Devices <a name = "audio-GlobalAudioDevices"><a/>
 
-[Insert Image of Video Tab]
-Now you shouldn't have to mess with this settings to much a be able to **ignore both Base Resolution and Output Resolution** although issues may occur if you play with resolutions higher than 1080p and maybe don't want to deal with the increase resource use.
+Select whatever your **Desktop Audio** and **Mic/Auxiliary Audio** are.
 
-**Downscale Filter** can be set to either **Bicubic or Lanczos**, **Lanczos** is better but is more resource intensive but test it yourself and if you see issues maybe change it to **Bicubic**.
+## Video <a name = "video"><a/>
 
-**Common FPS Values** leave it at **60**, unless you want to do some weird shit
+Leave **Base (Canvas) Resolution** and **Output (Scaled) Resolution** to whatever they are.  You may have to change it depending on your use case.
 
 
-## Replay Buffer <a name="replayBuffer"><a/>
-### Disclaimer
+**Downscale Filter** can either be **Bicubic** or **Lanczos** 
+- **Lanczos** uses more resources but has sharper image quality
+- **Bicubic** is a good balance between resource use and and image quality
 
-### Settings <a name="replayBufferSettings"><a/>
-Go to the **Replay Buffer** inside the **Output** tab and you should see this
-[Image of Replay Buffer Tab]
 
-Now the **Maximum Replay Time** should be set to either **30s to 240s** as said by StuckInLimbo, anything more should just be a recording.
-Then Maximum Memory should range from **1GB (1024MB) to 4GB (4096MB)** scaling according to the amount of time be replayed of course. 
-
-### Hotkeys <a name="replayBufferHotkeys"><a/>
+## Hotkeys <a name = "hotkeys"><a/>
 [Include Image of Hotkeys]
-Go to the **Hotkeys tab** and scroll until you find **"Start Replay Buffer"** and **"Stop Replay Buffer"**, personally I didn't fully set it up because with settings we will discuss later on makes it not too important but if you want to you can set those up.
 
-After those scroll down more until you see **Replay Buffer** with only one hotkey available, **"Save Replay"**, set it to whatever you want maybe **\\** or something with **ALT + __**
+Go to the **Hotkeys tab** and scroll until you find **"Start Replay Buffer"** and **"Stop Replay Buffer"**, personally I didn't set these up but you may want to.
 
-## Advanced Settings <a name="advanced"><a/>
-We are going to focusing on **General, Video, and Recording,** everything else doesn't matter.
+Scroll down a little more until you see **Replay Buffer** with only one hotkey available, **"Save Replay"**, choice is your to make it whatever you want.
 
-### General <a name="advancedGeneral"><a/>
+
+## Advanced <a name = "advanced"><a/>
+Going to be focusing on **General, Video, and Recording.** 
+
+### General <a name = "advanced-General"><a/>
 **Process Priority** can be left on either **Normal or Above Normal**
-	--- What this does is make be prioritized for resources on your computer.
-	
-### Video <a name="advancedVideo"><a/>
-**Renderer** should already be set to **Direct3D 11** although if something else is there leave it be.
+- All this does is prioritize resources for OBS
+
+### Video <a name = "advanced-Video"><a/>
+**Renderer** should already be set to **Direct3D 11** but if it isn't then leave it.
+
 Set **Color Format** to **NV12**
+
 Set **Color Space** to **709**
-Lastly, set **Color Range** to **Partial**
 
-### Recording <a name="advancedRecording"><a/>
-You can leave all of this as is, but with **Filename Formatting** if you click on it and hover over the text you can see all the possible settings you can set that to.
-Lastly, **leave all the other stuff unchecked and blank**
+Set **Color Range** to **Partial**
 
+### Recording <a name = "advanced-Recording"><a/>
+You can ignore this if you want but it's could be useful to you
 
+**Filename Formatting** basically allows you to change the information presented in the title of the clips, I'll give you the options and customize to your heart's content.
 
-## Debugging <a name="debugging"><a/>
-Now, this part is important to help you debug and fix any issues you incur upon testing.  Before I say this, I want you guys to know that in the [OBS Discord Server](https://discord.gg/obsproject) you can ask for support but in my head just in case this blows up I don't want to fill that discord with supports of the same issue, so I want you guys to try and fix the issue yourself, and search up solutions to it yourself, and if it still doesn't work then go straight ahead to the [discord server](https://discord.gg/obsproject). 
+[Insert Image of Filename Formatting Info]
+
+# Debugging <a name = "debugging"><a/>
+This part is going to be a major help in fixing problems you may incur on following this guide.  
 
 The way they recommend to debug is 
 1. **Run the Replay Buffer for 30s or longer**
-	- Optional/What I Do: **Take a clip**
-2. Stop the **Replay Buffer**
+	- Optional: **Save Replay**
+2. **Stop the Replay Buffer**
 [Image Needed of Help>Upload Current Log File]
 3. Follow the image and click on **Upload Current Log File**
 4. Click **Analyze**
-	- Once you click this it'll take you to a website that'll show the problems that are arising in your use-case as well as stating the fixes.  It's a super useful tool.  And if you still can't solve the issue then go ahead and ask for help in one of the support channels and remember to send a link to your logs so they can actually help you.
+	- This will bring you to a website that displays **Critical Issues, Warnings, and Info**  and will help you debug by stating the problems arising in your case as well as stating solutions to them.  It has also helped me fix some bugs that I found through my journey of this.
+
+> But MFGAVIN, this shit still ain't working!
+
+So if all of this still hasn't worked then I'd like to direct you towards the[OBS Discord Server](https://discord.gg/obsproject) which has support desks.  I left this as the last option since depending on how good this guide does I don't want to overflow the discord with the same shit.
 
 
 
-## How to Make OBS Run on Startup <a name="obsStartup"><a/>
+# Making OBS Open on Startup <a name = "obsAutoStart"><a/>
+
 **Thanks to Koala for letting me use this guide they made for here.**
 
-You are able to run OBS as administrator on login without elevation prompt by using the task scheduling feature of Windows.  
+With this guide you will be able to run OBS as an administrator on login without elevation prompt by using the task scheduling feature of Windows.  
 
 You should find the **Task Scheduler** by searching for "task scheduler" in **Windows Search**. It should find your localized name for task scheduler.  
 In **Task Scheduler**, right-click the library and select **Create Task**.  
@@ -315,10 +320,11 @@ C:\Windows\System32\schtasks.exe /run /tn "OBS Studio autostart"
   
 Notice that "OBS Studio autostart" is the name of the scheduled task you gave on the first property page of the task.
 
-## The Guide Itself <a name = "guide"><a/>
+# The Guide Itself <a name = "guide"><a/>
 This section is purely for the development of the guide itself.
+Also it's WIP cuz Idk what to put it in rn
 
-## Sources Used <a name = "citations"><a/>
+# Credits & Cited Sources <a name = "citations"><a/>
 I'd like to give thanks to the [OBS discord server](https://discord.gg/obsproject) and [Epos Vox's discord server](https://discord.gg/eposvox) for helping with questions I had.
 
 Then thanks to [StuckInLimbo's OBS-ReplayBuffer-Setup](https://github.com/StuckInLimbo/OBS-ReplayBuffer-Setup) as I heavily used the information provided to make this guide
