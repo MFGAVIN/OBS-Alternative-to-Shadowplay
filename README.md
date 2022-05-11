@@ -3,7 +3,7 @@
 
 ## Table of Contents
 This has been formatted in my thinking of a tree, as in the pathing taken to get to it.
-- [Introduction](#introduction) 
+- [Introduction (Optional)](#introduction) 
 - [Disclaimer](#disclaimer) 
 - [Prerequisites](#prerequisites) 
 - [Starting Screen of OBS](#mainWindow) 
