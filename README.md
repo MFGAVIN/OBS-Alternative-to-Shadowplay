@@ -77,11 +77,11 @@ So with this you can start fresh and be able to follow the tutorial, but again i
 
 I'll give you guys my profile and scene collection which can skip most likely the entirety of this guide but you will still potentially have to change them.
 
-Profile:
-[ClipRecorder - Profile.zip](https://github.com/MFGAVIN/OBS-Alternative-to-Shadowplay/files/8665491/ClipRecorder.-.Profile.zip)
+- Profile:
+  - [ClipRecorder - Profile.zip](https://github.com/MFGAVIN/OBS-Alternative-to-Shadowplay/files/8665491/ClipRecorder.-.Profile.zip)
 
-Scene Collection:
-[ClipRecorder - Scene Collection.zip](https://github.com/MFGAVIN/OBS-Alternative-to-Shadowplay/files/8665492/ClipRecorder.-.Scene.Collection.zip)
+- Scene Collection:
+	- [ClipRecorder - Scene Collection.zip](https://github.com/MFGAVIN/OBS-Alternative-to-Shadowplay/files/8665492/ClipRecorder.-.Scene.Collection.zip)
 
 ## Scene Creation and Automatic Scene Switcher <a name="scass"><a/>
 
