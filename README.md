@@ -36,7 +36,7 @@ This has been formatted in my thinking of a tree, as in the pathing taken to get
 - [The Guide Itself](#guide)
 - [Credits & Cited Sources](#citations)
 
-# Introduction <a name = "introduction"><a/>
+# Introduction (Optional) <a name = "introduction"><a/>
 
 Hi, my name is MFGAVIN and the reason for this guide was that Shadowplay worked horriblely for me, the audio as well as the videeo quality were terrible.  So I tried other alternatives, mainly Medal.tv but once again it was a horrible experience. And after that I was stumped since I there wasn't any software I considered to be good enough and didn't really know what I should do.  But after some time I decided to try and make my own through OBS and well now you know I was able to.
 
