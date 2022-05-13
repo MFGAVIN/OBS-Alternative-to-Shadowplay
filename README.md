@@ -98,10 +98,10 @@ Leave the **Mode** on **Capture any fullscreen application**
 
 **For LoL:**
  If you're trying to add **League of Legends** and it's not working it could be because of your overlays as it's really stingy, so make sure you check it out, for me it didn't work because of **RTSS Overlay**.  If that do
- 
+
 ### Automatic Scene Switcher <a name="ass"><a/>
 
-This part's also vital since it'll optimize the resources when switching between Desktop and Game capture. 
+This part's also vital since it'll optimize the resources when switching between Desktop and Game capture.
 
 **Note:** Whenever you setup everything up you may notice sometimes clips go into folders they shouldn't be, this can be caused from trying to **Save Replay** but Alt+Tab'ing out which causes the clip to be prefixed with another scene names
 
@@ -211,9 +211,9 @@ Set All the **Audio Track's bitrate to 160** and you can name them if you want t
 
 ### Replay Buffer <a name = "output-ReplayBuffer"><a/>
 
-**Maximum Replay Time** should be set from a range of **30s to 240s**
+**Maximum Replay Time** is recommended to be set between a range of **30s to 240s** but can be however long you want it to be.
 
-**Maximum Memory** should range from **1GB (1024MB) to 4GB (4096MB)**  
+**Maximum Memory** should range from **1GB (1024MB) to 4GB (4096MB)** 
 
 ## Audio <a name = "audio"><a/>
 
