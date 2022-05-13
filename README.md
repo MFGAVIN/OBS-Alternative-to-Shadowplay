@@ -71,7 +71,8 @@ Before we continue, do this stuff first so I don't have to help you through it.
 This part only really matters if you have a bunch of scenes and stuff already setup and don't want to screw it up.
 
 So in the main window of OBS if you look at the top you will see **Profile** and **Scene Collection** the purpose of these are to make it able to have completely different settings and scenes apart from your usually stuff.
-[Insert Image of Profile and Dropdown Menu]
+	
+![image](https://user-images.githubusercontent.com/40813002/168303668-364a494f-3419-485f-b016-28475dd13f64.png)
 
 So with this you can start fresh and be able to follow the tutorial, but again it's not really necessary.
 
