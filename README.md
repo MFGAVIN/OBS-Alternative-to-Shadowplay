@@ -33,7 +33,7 @@ This has been formatted in my thinking of a tree, as in the pathing taken to get
     - [Recording](#advanced-Recording)
 - [Debugging](#debugging)
 - [Making OBS Open on Startup](#obsAutoStart)
-- [The Guide Itself](#guide)
+- [Making a Sound Play on Save Replay](#soundScript)
 - [Credits & Cited Sources](#citations)
 
 # Introduction (Optional) <a name = "introduction"><a/>
@@ -342,10 +342,8 @@ C:\Windows\System32\schtasks.exe /run /tn "OBS Studio autostart"
   
 Notice that "OBS Studio autostart" is the name of the scheduled task you gave on the first property page of the task.
 
-# The Guide Itself <a name = "guide"><a/>
-
-This section is purely for the development of the guide itself.
-Also it's WIP cuz Idk what to put it in rn, (might delete later felt cute!)
+# Making a Sound Play on Save Replay <a name = "soundScript"><a/>
+After looking for a bit and procrasinating I found out two scripts that do the same thing but plays the sound at different points
 
 # Credits & Cited Sources <a name = "citations"><a/>
 
