@@ -337,7 +337,9 @@ In the Settings might be of interest to you. **Deactivate "Stop the task if it r
 
 This task scheduler trick works for every app you want to start at login. However, it's kind of a security risk.  
 You can even put an icon on the desktop that, upon click, will start this task manually, so you start OBS Studio as administrator without elevation prompt. Create a new shortcut with this target:  
-  
+
+easteregg
+
 C:\Windows\System32\schtasks.exe /run /tn "OBS Studio autostart"  
   
 Notice that "OBS Studio autostart" is the name of the scheduled task you gave on the first property page of the task.
