@@ -2,8 +2,6 @@
 
 ## Table of Contents
 
-easteregg5
-
 This has been formatted in my thinking of a tree, as in the pathing taken to get to it.
 
 - [Introduction (Optional)](#introduction)
