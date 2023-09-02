@@ -3,6 +3,7 @@
 ## Table of Contents
 
 This has been formatted in my thinking of a tree, as in the pathing taken to get to it.
+Planned = Seperate OBS Instances (Run Both Same Time + Seperate Options), Audio Track Plugin to Capture Specfic Applications, Reform Wording Structure
 
 - [Introduction (Optional)](#introduction)
 - [Disclaimer](#disclaimer)
